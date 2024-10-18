@@ -14,7 +14,7 @@ wezterm.on("window-focus-changed", function(window, pane)
 	else
 		-- Window is not focused, dim the background
 		window:set_config_overrides({
-			window_background_opacity = 0.7, -- Set dimmed opacity
+			window_background_opacity = 0.5, -- Set dimmed opacity
 		})
 		window_is_active = false
 	end
@@ -36,13 +36,47 @@ return {
 		{ key = "j", mods = "CMD", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
 
 		-- Split vertical: cmd+v
-		{ key = "h", mods = "CMD", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
+		{ key = "l", mods = "CMD", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
 
 		-- Move right one window (rotate right): ctrl+r
 		{ key = "l", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
 
 		-- Move left one window (rotate left): ctrl+l
 		{ key = "h", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
+
+    -- Move up one window (rotate up): ctrl+k
+    { key = "k", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
+
+    -- Move down one window (rotate down): ctrl+j
+    { key = "j", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
+
+		-- Resize the current pane left: ctrl+alt+h
+		{
+			key = "h",
+			mods = "CTRL|ALT",
+			action = wezterm.action.AdjustPaneSize({ "Left", 5 }),
+		},
+
+		-- Resize the current pane right: ctrl+alt+l
+		{
+			key = "l",
+			mods = "CTRL|ALT",
+			action = wezterm.action.AdjustPaneSize({ "Right", 5 }),
+		},
+
+		-- Resize the current pane up: ctrl+alt+k
+		{
+			key = "k",
+			mods = "CTRL|ALT",
+			action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
+		},
+
+		-- Resize the current pane down: ctrl+alt+j
+		{
+			key = "j",
+			mods = "CTRL|ALT",
+			action = wezterm.action.AdjustPaneSize({ "Down", 5 }),
+		},
 
 		-- Rename tab: ctrl+shift+t
 		{
@@ -59,6 +93,20 @@ return {
 					end
 				end),
 			}),
+		},
+
+		-- Move tab to the left: ctrl+shift+left
+		{
+			key = "LeftArrow",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action.MoveTabRelative(-1),
+		},
+
+		-- Move tab to the right: ctrl+shift+right
+		{
+			key = "RightArrow",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action.MoveTabRelative(1),
 		},
 	},
 
@@ -96,7 +144,7 @@ return {
 	-- Dim inactive panes to make the active one stand out
 	inactive_pane_hsb = {
 		hue = 1.0, -- Keep the hue the same
-		saturation = 0.6, -- Reduce saturation for inactive panes
-		brightness = 0.3, -- Make inactive panes slightly dimmer
+		saturation = 0.7, -- Reduce saturation for inactive panes
+		brightness = 0.5, -- Make inactive panes slightly dimmer
 	},
 }
