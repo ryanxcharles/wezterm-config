@@ -45,6 +45,8 @@ return {
 		{ key = "h", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
 	},
 
+	font_size = 11,
+
 	colors = {
 		foreground = "#D8DEE9",
 		background = "#2E3440",
@@ -68,16 +70,16 @@ return {
 			},
 			inactive_pane_edge = "#4C566A", -- Color the edge/border of inactive panes
 		},
-
-		-- Dim inactive panes to make the active one stand out
-		-- inactive_pane = {
-		-- 	hue = 1.0, -- Keep the hue the same
-		-- 	saturation = 0.7, -- Reduce saturation for inactive panes
-		-- 	brightness = 0.3, -- Make inactive panes slightly dimmer
-		-- },
 	},
 
 	-- Window background opacity setting for dimming
 	window_background_opacity = 1.0, -- Set the default active window opacity
 	inactive_window_opacity = 0.7, -- Set the opacity when the window is inactive
+
+	-- Dim inactive panes to make the active one stand out
+	inactive_pane_hsb = {
+		hue = 1.0, -- Keep the hue the same
+		saturation = 0.6, -- Reduce saturation for inactive panes
+		brightness = 0.3, -- Make inactive panes slightly dimmer
+	},
 }
