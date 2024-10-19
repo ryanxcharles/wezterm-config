@@ -30,28 +30,47 @@ local activeWindowColors = {
 }
 
 local inactiveWindowColors = {
-	-- Nord theme
-	foreground = "#D8DEE9",
-	background = "#2E3440",
-	cursor_bg = "#D8DEE9",
-	cursor_border = "#D8DEE9",
-	cursor_fg = "#2E3440",
-	selection_bg = "#434C5E",
-	selection_fg = "#D8DEE9",
+  -- Nord theme with less saturation
+  foreground = "#C6CCD2",  -- Desaturated foreground
+  background = "#2B3038",  -- Slightly darker, less vibrant background
+  cursor_bg = "#C6CCD2",   -- Desaturated cursor background
+  cursor_border = "#C6CCD2",  -- Match cursor background with border
+  cursor_fg = "#2B3038",   -- Adjusted cursor foreground
+  selection_bg = "#3F4855",  -- Less saturated selection background
+  selection_fg = "#C6CCD2",  -- Desaturated selection foreground
 
-	ansi = { "#3B4252", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#88C0D0", "#E5E9F0" },
-	brights = { "#4C566A", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#8FBCBB", "#ECEFF4" },
+  ansi = {
+    "#343B45",  -- Desaturated black
+    "#B05858",  -- Desaturated red
+    "#8DAA85",  -- Desaturated green
+    "#C3A45B",  -- Desaturated yellow
+    "#6B829C",  -- Desaturated blue
+    "#A47A9F",  -- Desaturated magenta
+    "#7B9A98",  -- Desaturated cyan
+    "#C8D1DA",  -- Desaturated white
+  },
 
-	tab_bar = {
-		active_tab = {
-			bg_color = "#808080", -- Gray color for the active tab when window is inactive
-			fg_color = "#D3D3D3", -- Light gray text
-		},
-		inactive_tab = {
-			bg_color = "#3B4252", -- Dimmer color for inactive tabs
-			fg_color = "#D8DEE9", -- Keep text in inactive tabs dimmer
-		},
-	},
+  brights = {
+    "#49505A",  -- Desaturated bright black
+    "#B05858",  -- Desaturated bright red (similar to non-bright)
+    "#8DAA85",  -- Desaturated bright green
+    "#C3A45B",  -- Desaturated bright yellow
+    "#6B829C",  -- Desaturated bright blue
+    "#A47A9F",  -- Desaturated bright magenta
+    "#7B9A98",  -- Desaturated bright cyan
+    "#D1DBE1",  -- Desaturated bright white
+  },
+
+  tab_bar = {
+    active_tab = {
+      bg_color = "#707070",  -- Slightly darker gray for the active tab
+      fg_color = "#C0C0C0",  -- Desaturated light gray for the active tab text
+    },
+    inactive_tab = {
+      bg_color = "#343B45",  -- Desaturated background for inactive tabs
+      fg_color = "#C6CCD2",  -- Desaturated text for inactive tabs
+    },
+  },
 }
 
 wezterm.on("window-focus-changed", function(window, pane)
