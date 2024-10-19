@@ -2,21 +2,72 @@ local wezterm = require("wezterm")
 
 -- Reload config: cmd+shift+r
 
-local window_is_active = true -- Track window active status
+-- local window_is_active = true -- Track window active status
+
+local activeWindowColors = {
+	-- Nord theme
+	foreground = "#D8DEE9",
+	background = "#2E3440",
+	cursor_bg = "#D8DEE9",
+	cursor_border = "#D8DEE9",
+	cursor_fg = "#2E3440",
+	selection_bg = "#434C5E",
+	selection_fg = "#D8DEE9",
+
+	ansi = { "#3B4252", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#88C0D0", "#E5E9F0" },
+	brights = { "#4C566A", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#8FBCBB", "#ECEFF4" },
+
+	tab_bar = {
+		active_tab = {
+			bg_color = "#33669A", -- Change to a highlighted background color for active tab
+			fg_color = "#ECEFF4", -- Change to a highlighted text color for active tab
+		},
+		inactive_tab = {
+			bg_color = "#3B4252", -- Dimmer color for inactive tabs
+			fg_color = "#D8DEE9", -- Keep text in inactive tabs dimmer
+		},
+	},
+}
+
+local inactiveWindowColors = {
+	-- Nord theme
+	foreground = "#D8DEE9",
+	background = "#2E3440",
+	cursor_bg = "#D8DEE9",
+	cursor_border = "#D8DEE9",
+	cursor_fg = "#2E3440",
+	selection_bg = "#434C5E",
+	selection_fg = "#D8DEE9",
+
+	ansi = { "#3B4252", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#88C0D0", "#E5E9F0" },
+	brights = { "#4C566A", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#8FBCBB", "#ECEFF4" },
+
+	tab_bar = {
+		active_tab = {
+			bg_color = "#808080", -- Gray color for the active tab when window is inactive
+			fg_color = "#D3D3D3", -- Light gray text
+		},
+		inactive_tab = {
+			bg_color = "#3B4252", -- Dimmer color for inactive tabs
+			fg_color = "#D8DEE9", -- Keep text in inactive tabs dimmer
+		},
+	},
+}
 
 wezterm.on("window-focus-changed", function(window, pane)
 	if window:is_focused() then
-		-- Window is focused, make it fully opaque
+		-- Window is focused, restore normal settings
 		window:set_config_overrides({
-			window_background_opacity = 1.0,
+			window_background_opacity = 1.0, -- Restore normal opacity
+			colors = activeWindowColors,
 		})
-		window_is_active = true
 	else
-		-- Window is not focused, dim the background
+		-- Window is not focused, change active tab to "great" (gray-like) color
 		window:set_config_overrides({
-			window_background_opacity = 0.5, -- Set dimmed opacity
+			window_background_opacity = 0.8, -- Set dimmed opacity
+			-- colors = activeWindowColors,
+			colors = inactiveWindowColors,
 		})
-		window_is_active = false
 	end
 end)
 
@@ -44,11 +95,11 @@ return {
 		-- Move left one window (rotate left): ctrl+l
 		{ key = "h", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
 
-    -- Move up one window (rotate up): ctrl+k
-    { key = "k", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
+		-- Move up one window (rotate up): ctrl+k
+		{ key = "k", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
 
-    -- Move down one window (rotate down): ctrl+j
-    { key = "j", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
+		-- Move down one window (rotate down): ctrl+j
+		{ key = "j", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
 
 		-- Resize the current pane left: ctrl+alt+h
 		{
@@ -112,30 +163,7 @@ return {
 
 	font_size = 11,
 
-	colors = {
-		foreground = "#D8DEE9",
-		background = "#2E3440",
-		cursor_bg = "#FA8603",
-		cursor_border = "#FA8603",
-		cursor_fg = "#FFFFFF",
-		selection_bg = "#434C5E",
-		selection_fg = "#D8DEE9",
-
-		ansi = { "#3B4252", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#88C0D0", "#E5E9F0" },
-		brights = { "#4C566A", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#8FBCBB", "#ECEFF4" },
-
-		tab_bar = {
-			active_tab = {
-				bg_color = "#4C566A", -- Change to a highlighted background color for active tab
-				fg_color = "#ECEFF4", -- Change to a highlighted text color for active tab
-			},
-			inactive_tab = {
-				bg_color = "#3B4252", -- Dimmer color for inactive tabs
-				fg_color = "#D8DEE9", -- Keep text in inactive tabs dimmer
-			},
-			-- inactive_pane_edge = "#4C566A", -- Color the edge/border of inactive panes
-		},
-	},
+	colors = activeWindowColors,
 
 	-- Window background opacity setting for dimming
 	window_background_opacity = 1.0, -- Set the default active window opacity
