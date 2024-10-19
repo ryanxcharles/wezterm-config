@@ -5,21 +5,21 @@ local wezterm = require("wezterm")
 -- local window_is_active = true -- Track window active status
 
 local config_window_frame_active = {
-  -- Titlebar colors
-  inactive_titlebar_bg = '#3B4252',  -- Matches inactive tab background
-  active_titlebar_bg = '#2E3440',    -- Matches window background
-  inactive_titlebar_fg = '#D8DEE9',  -- Matches dimmed foreground for inactive tabs
-  active_titlebar_fg = '#ECEFF4',    -- Matches bright foreground for active tabs
+	-- Titlebar colors
+	inactive_titlebar_bg = "#3B4252", -- Matches inactive tab background
+	active_titlebar_bg = "#2E3440", -- Matches window background
+	inactive_titlebar_fg = "#D8DEE9", -- Matches dimmed foreground for inactive tabs
+	active_titlebar_fg = "#ECEFF4", -- Matches bright foreground for active tabs
 
-  -- Titlebar border colors
-  inactive_titlebar_border_bottom = '#434C5E',  -- Matches selection background (subtle border)
-  active_titlebar_border_bottom = '#5191E1',    -- Matches active tab background (highlighted)
+	-- Titlebar border colors
+	inactive_titlebar_border_bottom = "#434C5E", -- Matches selection background (subtle border)
+	active_titlebar_border_bottom = "#5191E1", -- Matches active tab background (highlighted)
 
-  -- Button colors (for minimize, maximize, close)
-  button_fg = '#D8DEE9',           -- Matches dimmed foreground
-  button_bg = '#2E3440',           -- Matches background
-  button_hover_fg = '#ECEFF4',     -- Brighter text when hovering
-  button_hover_bg = '#5191E1',     -- Matches active tab background when hovering
+	-- Button colors (for minimize, maximize, close)
+	button_fg = "#D8DEE9", -- Matches dimmed foreground
+	button_bg = "#2E3440", -- Matches background
+	button_hover_fg = "#ECEFF4", -- Brighter text when hovering
+	button_hover_bg = "#5191E1", -- Matches active tab background when hovering
 }
 
 local config_colors_active = {
@@ -61,6 +61,17 @@ local config_colors_active = {
 		inactive_tab = {
 			bg_color = "#3B4252", -- Dimmer color for inactive tabs
 			fg_color = "#D8DEE9", -- Keep text in inactive tabs dimmer
+		},
+		-- New tab button styling
+		new_tab = {
+			bg_color = "#3C4C61", -- Slight blue-gray background for the new tab button
+			fg_color = "#D8DEE9", -- Light gray text color for the new tab button
+		},
+
+		-- Styling for the new tab button when hovering
+		new_tab_hover = {
+			bg_color = "#5191E1", -- Bright blue-gray when hovering over the new tab button
+			fg_color = "#FFFFFF", -- White text when hovering
 		},
 	},
 }
@@ -105,6 +116,17 @@ local config_colors_inactive = {
 		inactive_tab = {
 			bg_color = "#343B45", -- Desaturated background for inactive tabs
 			fg_color = "#C6CCD2", -- Desaturated text for inactive tabs
+		},
+		-- New tab button styling
+		new_tab = {
+			bg_color = "#3C4C61", -- Slight blue-gray background for the new tab button
+			fg_color = "#D8DEE9", -- Light gray text color for the new tab button
+		},
+
+		-- Styling for the new tab button when hovering
+		new_tab_hover = {
+			bg_color = "#5191E1", -- Bright blue-gray when hovering over the new tab button
+			fg_color = "#FFFFFF", -- White text when hovering
 		},
 	},
 }
@@ -230,5 +252,5 @@ return {
 		brightness = 0.5, -- Make inactive panes slightly dimmer
 	},
 
-  window_frame = config_window_frame_active,
+	window_frame = config_window_frame_active,
 }
