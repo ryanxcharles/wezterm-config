@@ -64,7 +64,7 @@ local config_colors_active = {
 		},
 		-- New tab button styling
 		new_tab = {
-			bg_color = "#3C4C61", -- Slight blue-gray background for the new tab button
+			bg_color = "#3B4252", -- Slight blue-gray background for the new tab button
 			fg_color = "#D8DEE9", -- Light gray text color for the new tab button
 		},
 
@@ -119,7 +119,7 @@ local config_colors_inactive = {
 		},
 		-- New tab button styling
 		new_tab = {
-			bg_color = "#3C4C61", -- Slight blue-gray background for the new tab button
+			bg_color = "#3B4252", -- Slight blue-gray background for the new tab button
 			fg_color = "#D8DEE9", -- Light gray text color for the new tab button
 		},
 
