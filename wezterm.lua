@@ -13,10 +13,29 @@ local activeWindowColors = {
 	selection_bg = "#434C5E",
 	selection_fg = "#D8DEE9",
 
-	ansi = { "#3B4252", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#88C0D0", "#E5E9F0" },
-	brights = { "#4C566A", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#8FBCBB", "#ECEFF4" },
+	ansi = {
+		"#3B4252", -- Black
+		"#BF616A", -- Red
+		"#A3BE8C", -- Green
+		"#EBCB8B", -- Yellow
+		"#81A1C1", -- Blue
+		"#B48EAD", -- Magenta
+		"#88C0D0", -- Cyan
+		"#E5E9F0", -- White (Light Gray)
+	},
+	brights = {
+		"#4C566A", -- Bright Black (Gray)
+		"#BF616A", -- Bright Red
+		"#A3BE8C", -- Bright Green
+		"#EBCB8B", -- Bright Yellow
+		"#81A1C1", -- Bright Blue
+		"#B48EAD", -- Bright Magenta
+		"#8FBCBB", -- Bright Cyan
+		"#ECEFF4", -- Bright White (Pure White)
+	},
 
 	tab_bar = {
+		background = "#000000",
 		active_tab = {
 			bg_color = "#5191E1", -- Change to a highlighted background color for active tab
 			fg_color = "#ECEFF4", -- Change to a highlighted text color for active tab
@@ -60,6 +79,7 @@ local inactiveWindowColors = {
 	},
 
 	tab_bar = {
+		background = "#000000",
 		active_tab = {
 			bg_color = "#707070", -- Slightly darker gray for the active tab
 			fg_color = "#C0C0C0", -- Desaturated light gray for the active tab text
