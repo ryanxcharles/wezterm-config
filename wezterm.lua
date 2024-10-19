@@ -112,30 +112,56 @@ return {
 
 	font_size = 11,
 
-	colors = {
-		foreground = "#D8DEE9",
-		background = "#2E3440",
-		cursor_bg = "#FA8603",
-		cursor_border = "#FA8603",
-		cursor_fg = "#FFFFFF",
-		selection_bg = "#434C5E",
-		selection_fg = "#D8DEE9",
+colors = {
+  -- Brighter foreground and background for better contrast
+  foreground = "#ECEFF4",  -- Brighter white for text
+  background = "#1E1F29",  -- Darker background for better contrast
 
-		ansi = { "#3B4252", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#88C0D0", "#E5E9F0" },
-		brights = { "#4C566A", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#8FBCBB", "#ECEFF4" },
+  -- More vibrant cursor colors
+  cursor_bg = "#FF9800",    -- Brighter orange for the cursor
+  cursor_border = "#FF9800",  -- Match cursor border with cursor color
+  cursor_fg = "#FFFFFF",    -- Keep white for better contrast
 
-		tab_bar = {
-			active_tab = {
-				bg_color = "#4C566A", -- Change to a highlighted background color for active tab
-				fg_color = "#ECEFF4", -- Change to a highlighted text color for active tab
-			},
-			inactive_tab = {
-				bg_color = "#3B4252", -- Dimmer color for inactive tabs
-				fg_color = "#D8DEE9", -- Keep text in inactive tabs dimmer
-			},
-			inactive_pane_edge = "#4C566A", -- Color the edge/border of inactive panes
-		},
-	},
+  -- Brighter selection colors
+  selection_bg = "#5C6B88",  -- Slightly brighter selection background
+  selection_fg = "#ECEFF4",  -- Brighter text when selected
+
+  -- More vibrant ANSI colors
+  ansi = {
+    "#3B4252",  -- Black (no change)
+    "#FF5555",  -- Red (brighter, more vibrant)
+    "#A3BE8C",  -- Green (slightly adjusted)
+    "#F0C674",  -- Yellow (brighter, more saturated)
+    "#81A1C1",  -- Blue (slightly more saturated)
+    "#D087C2",  -- Magenta (more vibrant)
+    "#8ABEB7",  -- Cyan (slightly more bold)
+    "#ECEFF4",  -- White (brighter)
+  },
+
+  brights = {
+    "#4C566A",  -- Bright black (dimmed)
+    "#FF6E6E",  -- Bright red (more vibrant)
+    "#A3BE8C",  -- Bright green (slightly adjusted)
+    "#FFD580",  -- Bright yellow (more vibrant)
+    "#81A1C1",  -- Bright blue (slightly adjusted)
+    "#D8A0E5",  -- Bright magenta (brighter, more vibrant)
+    "#8AEAEA",  -- Bright cyan (bolder)
+    "#FFFFFF",  -- Bright white (pure white)
+  },
+
+  -- Enhanced tab bar colors for clarity
+  tab_bar = {
+    active_tab = {
+      bg_color = "#FF9800",  -- Bold orange for active tab background
+      fg_color = "#FFFFFF",  -- White text for active tab
+    },
+    inactive_tab = {
+      bg_color = "#3B4252",  -- Darker background for inactive tabs
+      fg_color = "#888C99",  -- Dimmed text for inactive tabs
+    },
+    inactive_pane_edge = "#FF9800",  -- Match the active tab highlight
+  },
+},
 
 	-- Window background opacity setting for dimming
 	window_background_opacity = 1.0, -- Set the default active window opacity
