@@ -5,33 +5,19 @@ local wezterm = require("wezterm")
 local window_is_active = true -- Track window active status
 
 wezterm.on("window-focus-changed", function(window, pane)
-  if window:is_focused() then
-    -- Window is focused, restore normal settings
-    window:set_config_overrides({
-      window_background_opacity = 1.0,  -- Restore normal opacity
-      colors = {
-        tab_bar = {
-          active_tab = {
-            bg_color = "#FF9800",  -- Bright orange when window is active
-            fg_color = "#FFFFFF",  -- White text
-          },
-        },
-      },
-    })
-  else
-    -- Window is not focused, change active tab to "great" (gray-like) color
-    window:set_config_overrides({
-      window_background_opacity = 0.5,  -- Set dimmed opacity
-      colors = {
-        tab_bar = {
-          active_tab = {
-            bg_color = "#808080",  -- Gray color for the active tab when window is inactive
-            fg_color = "#D3D3D3",  -- Light gray text
-          },
-        },
-      },
-    })
-  end
+	if window:is_focused() then
+		-- Window is focused, make it fully opaque
+		window:set_config_overrides({
+			window_background_opacity = 1.0,
+		})
+		window_is_active = true
+	else
+		-- Window is not focused, dim the background
+		window:set_config_overrides({
+			window_background_opacity = 0.5, -- Set dimmed opacity
+		})
+		window_is_active = false
+	end
 end)
 
 return {
