@@ -110,8 +110,8 @@ local config_colors_inactive = {
 	tab_bar = {
 		background = "#000000",
 		active_tab = {
-			bg_color = "#707070", -- Slightly darker gray for the active tab
-			fg_color = "#C0C0C0", -- Desaturated light gray for the active tab text
+			bg_color = "#343B45", -- Desaturated background for active tabs
+			fg_color = "#C6CCD2", -- Desaturated text for active tabs
 		},
 		inactive_tab = {
 			bg_color = "#343B45", -- Desaturated background for inactive tabs
