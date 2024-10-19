@@ -133,13 +133,12 @@ return {
 				bg_color = "#3B4252", -- Dimmer color for inactive tabs
 				fg_color = "#D8DEE9", -- Keep text in inactive tabs dimmer
 			},
-			inactive_pane_edge = "#4C566A", -- Color the edge/border of inactive panes
+			-- inactive_pane_edge = "#4C566A", -- Color the edge/border of inactive panes
 		},
 	},
 
 	-- Window background opacity setting for dimming
 	window_background_opacity = 1.0, -- Set the default active window opacity
-	inactive_window_opacity = 0.7, -- Set the opacity when the window is inactive
 
 	-- Dim inactive panes to make the active one stand out
 	inactive_pane_hsb = {
