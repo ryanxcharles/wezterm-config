@@ -4,7 +4,25 @@ local wezterm = require("wezterm")
 
 -- local window_is_active = true -- Track window active status
 
-local activeWindowColors = {
+local config_window_frame_active = {
+  -- Titlebar colors
+  inactive_titlebar_bg = '#3B4252',  -- Matches inactive tab background
+  active_titlebar_bg = '#2E3440',    -- Matches window background
+  inactive_titlebar_fg = '#D8DEE9',  -- Matches dimmed foreground for inactive tabs
+  active_titlebar_fg = '#ECEFF4',    -- Matches bright foreground for active tabs
+
+  -- Titlebar border colors
+  inactive_titlebar_border_bottom = '#434C5E',  -- Matches selection background (subtle border)
+  active_titlebar_border_bottom = '#5191E1',    -- Matches active tab background (highlighted)
+
+  -- Button colors (for minimize, maximize, close)
+  button_fg = '#D8DEE9',           -- Matches dimmed foreground
+  button_bg = '#2E3440',           -- Matches background
+  button_hover_fg = '#ECEFF4',     -- Brighter text when hovering
+  button_hover_bg = '#5191E1',     -- Matches active tab background when hovering
+}
+
+local config_colors_active = {
 	foreground = "#D8DEE9",
 	background = "#2E3440",
 	cursor_bg = "#FA8603",
@@ -47,7 +65,7 @@ local activeWindowColors = {
 	},
 }
 
-local inactiveWindowColors = {
+local config_colors_inactive = {
 	foreground = "#C6CCD2", -- Desaturated foreground
 	background = "#2B3038", -- Slightly darker, less vibrant background
 	cursor_bg = "#C6CCD2", -- Desaturated cursor background
@@ -96,14 +114,14 @@ wezterm.on("window-focus-changed", function(window, pane)
 		-- Window is focused, restore normal settings
 		window:set_config_overrides({
 			window_background_opacity = 1.0, -- Restore normal opacity
-			colors = activeWindowColors,
+			colors = config_colors_active,
 		})
 	else
 		-- Window is not focused, change active tab to "great" (gray-like) color
 		window:set_config_overrides({
 			window_background_opacity = 0.8, -- Set dimmed opacity
-			-- colors = activeWindowColors,
-			colors = inactiveWindowColors,
+			-- colors = config_colors_active,
+			colors = config_colors_inactive,
 		})
 	end
 end)
@@ -200,7 +218,7 @@ return {
 
 	font_size = 11,
 
-	colors = activeWindowColors,
+	colors = config_colors_active,
 
 	-- Window background opacity setting for dimming
 	window_background_opacity = 1.0, -- Set the default active window opacity
@@ -211,4 +229,6 @@ return {
 		saturation = 0.7, -- Reduce saturation for inactive panes
 		brightness = 0.5, -- Make inactive panes slightly dimmer
 	},
+
+  window_frame = config_window_frame_active,
 }
