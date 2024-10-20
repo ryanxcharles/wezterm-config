@@ -9,7 +9,7 @@ local config_window_frame_active = {
 	inactive_titlebar_bg = "#04060b", -- Matches inactive tab background
 	active_titlebar_bg = "#14161b", -- Matches window background
 	inactive_titlebar_fg = "#D8DEE9", -- Matches dimmed foreground for inactive tabs
-	active_titlebar_fg = "#ECEFF4", -- Matches bright foreground for active tabs
+	active_titlebar_fg = "#FFFFFF", -- Matches bright foreground for active tabs
 
 	-- Titlebar border colors
 	inactive_titlebar_border_bottom = "#434C5E", -- Matches selection background (subtle border)
@@ -58,14 +58,14 @@ local config_colors_active = {
 		"#81A1C1", -- Bright Blue
 		"#B48EAD", -- Bright Magenta
 		"#8FBCBB", -- Bright Cyan
-		"#ECEFF4", -- Bright White (Pure White)
+		"#FFFFFF", -- Bright White (Pure White)
 	},
 
 	tab_bar = {
 		background = "#000000",
 		active_tab = {
 			bg_color = "#5f87af", -- Change to a highlighted background color for active tab
-			fg_color = "#ECEFF4", -- Change to a highlighted text color for active tab
+			fg_color = "#FFFFFF", -- Change to a highlighted text color for active tab
 		},
 		inactive_tab = {
 			bg_color = "#3B4252", -- Dimmer color for inactive tabs
@@ -81,7 +81,7 @@ local config_colors_active = {
 		},
 		inactive_tab_hover = {
 			bg_color = "#5f87af", -- Same color as the active tab background
-			fg_color = "#ECEFF4", -- Same text color as active tab
+			fg_color = "#FFFFFF", -- Same text color as active tab
 		},
 	},
 }
