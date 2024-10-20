@@ -33,7 +33,7 @@ local config_window_frame_active = {
 
 local config_colors_active = {
 	foreground = "#D8DEE9",
-	background = "#2E3440",
+	background = "#14161b",
 	cursor_bg = "#FA8603",
 	cursor_border = "#FA8603",
 	cursor_fg = "#FFFFFF",
@@ -88,7 +88,7 @@ local config_colors_active = {
 
 local config_colors_inactive = {
 	foreground = "#C6CCD2", -- Desaturated foreground
-	background = "#2B3038", -- Slightly darker, less vibrant background
+	background = "#04060b",
 	cursor_bg = "#C6CCD2", -- Desaturated cursor background
 	cursor_border = "#C6CCD2", -- Match cursor background with border
 	cursor_fg = "#2B3038", -- Adjusted cursor foreground
