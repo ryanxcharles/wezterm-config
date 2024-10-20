@@ -13,13 +13,13 @@ local config_window_frame_active = {
 
 	-- Titlebar border colors
 	inactive_titlebar_border_bottom = "#434C5E", -- Matches selection background (subtle border)
-	active_titlebar_border_bottom = "#5191E1", -- Matches active tab background (highlighted)
+	active_titlebar_border_bottom = "#5f87af", -- Matches active tab background (highlighted)
 
 	-- Button colors (for minimize, maximize, close)
 	button_fg = "#D8DEE9", -- Matches dimmed foreground
 	button_bg = "#2E3440", -- Matches background
 	button_hover_fg = "#FFFFFF", -- Brighter text when hovering
-	button_hover_bg = "#5191E1", -- Matches active tab background when hovering
+	button_hover_bg = "#5f87af", -- Matches active tab background when hovering
 
   -- border_left_width = '0.5cell',
   -- border_right_width = '0.5cell',
@@ -64,7 +64,7 @@ local config_colors_active = {
 	tab_bar = {
 		background = "#000000",
 		active_tab = {
-			bg_color = "#5191E1", -- Change to a highlighted background color for active tab
+			bg_color = "#5f87af", -- Change to a highlighted background color for active tab
 			fg_color = "#ECEFF4", -- Change to a highlighted text color for active tab
 		},
 		inactive_tab = {
@@ -76,11 +76,11 @@ local config_colors_active = {
 			fg_color = "#D8DEE9", -- Light gray text color for the new tab button
 		},
 		new_tab_hover = {
-			bg_color = "#5191E1", -- Bright blue-gray when hovering over the new tab button
+			bg_color = "#5f87af", -- Bright blue-gray when hovering over the new tab button
 			fg_color = "#FFFFFF", -- White text when hovering
 		},
 		inactive_tab_hover = {
-			bg_color = "#5191E1", -- Same color as the active tab background
+			bg_color = "#5f87af", -- Same color as the active tab background
 			fg_color = "#ECEFF4", -- Same text color as active tab
 		},
 	},
@@ -133,7 +133,7 @@ local config_colors_inactive = {
 			fg_color = "#D8DEE9", -- Light gray text color for the new tab button
 		},
 		new_tab_hover = {
-			bg_color = "#5191E1", -- Bright blue-gray when hovering over the new tab button
+			bg_color = "#5f87af", -- Bright blue-gray when hovering over the new tab button
 			fg_color = "#FFFFFF", -- White text when hovering
 		},
 		inactive_tab_hover = {
