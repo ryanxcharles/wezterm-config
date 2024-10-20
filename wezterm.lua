@@ -6,8 +6,8 @@ local wezterm = require("wezterm")
 
 local config_window_frame_active = {
 	-- Titlebar colors
-	inactive_titlebar_bg = "#3B4252", -- Matches inactive tab background
-	active_titlebar_bg = "#2E3440", -- Matches window background
+	inactive_titlebar_bg = "#04060b", -- Matches inactive tab background
+	active_titlebar_bg = "#14161b", -- Matches window background
 	inactive_titlebar_fg = "#D8DEE9", -- Matches dimmed foreground for inactive tabs
 	active_titlebar_fg = "#ECEFF4", -- Matches bright foreground for active tabs
 
