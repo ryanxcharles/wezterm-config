@@ -21,45 +21,29 @@ local config_window_frame_active = {
 	button_hover_fg = "#FFFFFF", -- Brighter text when hovering
 	button_hover_bg = "#5f87af", -- Matches active tab background when hovering
 
-  -- border_left_width = '0.5cell',
-  -- border_right_width = '0.5cell',
-  -- border_bottom_height = '0.25cell',
-  -- border_top_height = '0.25cell',
-  -- border_left_color = 'purple',
-  -- border_right_color = 'purple',
-  -- border_bottom_color = 'purple',
-  -- border_top_color = 'purple',
+	-- border_left_width = '0.5cell',
+	-- border_right_width = '0.5cell',
+	-- border_bottom_height = '0.25cell',
+	-- border_top_height = '0.25cell',
+	-- border_left_color = 'purple',
+	-- border_right_color = 'purple',
+	-- border_bottom_color = 'purple',
+	-- border_top_color = 'purple',
 }
 
 local config_colors_active = {
-	foreground = "#D8DEE9",
-	background = "#14161b",
-	cursor_bg = "#FA8603",
-	cursor_border = "#FA8603",
-	cursor_fg = "#FFFFFF",
-	selection_bg = "#434C5E",
-	selection_fg = "#D8DEE9",
+	foreground = "#D9E0EE",
+	background = "#1E1E2E",
+	cursor_bg = "#F5E0DC",
+	cursor_border = "#F5E0DC",
+	cursor_fg = "#1E1E2E",
+	selection_bg = "#51576D",
+	selection_fg = "#D9E0EE",
 
-	ansi = {
-		"#3B4252", -- Black
-		"#BF616A", -- Red
-		"#A3BE8C", -- Green
-		"#EBCB8B", -- Yellow
-		"#81A1C1", -- Blue
-		"#B48EAD", -- Magenta
-		"#88C0D0", -- Cyan
-		"#E5E9F0", -- White (Light Gray)
-	},
-	brights = {
-		"#4C566A", -- Bright Black (Gray)
-		"#BF616A", -- Bright Red
-		"#A3BE8C", -- Bright Green
-		"#EBCB8B", -- Bright Yellow
-		"#81A1C1", -- Bright Blue
-		"#B48EAD", -- Bright Magenta
-		"#8FBCBB", -- Bright Cyan
-		"#FFFFFF", -- Bright White (Pure White)
-	},
+	ansi = { "#6E6C7E", "#F38BA8", "#A6E3A1", "#F9E2AF", "#89B4FA", "#F5C2E7", "#94E2D5", "#BAC2DE" },
+	brights = { "#BAC2DE", "#F38BA8", "#A6E3A1", "#F9E2AF", "#89B4FA", "#F5C2E7", "#94E2D5", "#A6ADC8" },
+
+	indexed = { [16] = "#F2CDCD", [17] = "#C9CBFF" },
 
 	tab_bar = {
 		background = "#000000",
