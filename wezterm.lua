@@ -104,24 +104,24 @@ local config_colors_inactive = {
 	tab_bar = {
 		background = "#000000",
 		active_tab = {
-			bg_color = "#343B45", -- Desaturated background for active tabs
+			bg_color = "#000000", -- Desaturated background for active tabs
 			fg_color = "#C6CCD2", -- Desaturated text for active tabs
 		},
 		inactive_tab = {
-			bg_color = "#343B45", -- Desaturated background for inactive tabs
+			bg_color = "#000000", -- Desaturated background for inactive tabs
 			fg_color = "#C6CCD2", -- Desaturated text for inactive tabs
 		},
 		-- New tab button styling
 		new_tab = {
-			bg_color = "#3B4252", -- Slight blue-gray background for the new tab button
+			bg_color = "#000000", -- Slight blue-gray background for the new tab button
 			fg_color = "#D8DEE9", -- Light gray text color for the new tab button
 		},
 		new_tab_hover = {
-			bg_color = "#5f87af", -- Bright blue-gray when hovering over the new tab button
+			bg_color = "#000000", -- Bright blue-gray when hovering over the new tab button
 			fg_color = "#FFFFFF", -- White text when hovering
 		},
 		inactive_tab_hover = {
-			bg_color = "#343B45", -- Desaturated background for inactive tabs
+			bg_color = "#000000", -- Desaturated background for inactive tabs
 			fg_color = "#C6CCD2", -- Desaturated text for inactive tabs
 		},
 	},
