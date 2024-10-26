@@ -7,7 +7,7 @@ local wezterm = require("wezterm")
 local config_window_frame_active = {
 	-- Titlebar colors
 	inactive_titlebar_bg = "#04060b", -- Matches inactive tab background
-	active_titlebar_bg = "#14161b", -- Matches window background
+	active_titlebar_bg = "#1e1e2e", -- Matches window background
 	inactive_titlebar_fg = "#D8DEE9", -- Matches dimmed foreground for inactive tabs
 	active_titlebar_fg = "#FFFFFF", -- Matches bright foreground for active tabs
 
@@ -52,11 +52,11 @@ local config_colors_active = {
 			fg_color = "#FFFFFF", -- Change to a highlighted text color for active tab
 		},
 		inactive_tab = {
-			bg_color = "#3B4252", -- Dimmer color for inactive tabs
+			bg_color = "#1e1e2e", -- Dimmer color for inactive tabs
 			fg_color = "#D8DEE9", -- Keep text in inactive tabs dimmer
 		},
 		new_tab = {
-			bg_color = "#3B4252", -- Slight blue-gray background for the new tab button
+			bg_color = "#1e1e2e", -- Slight blue-gray background for the new tab button
 			fg_color = "#D8DEE9", -- Light gray text color for the new tab button
 		},
 		new_tab_hover = {
