@@ -156,6 +156,52 @@ return {
 		-- Move left one tab: ctrl+shift+l
 		{ key = "h", mods = "CTRL|SHIFT", action = wezterm.action({ ActivateTabRelative = -1 }) },
 
+		-- -- Split vertical: cmd+v
+		-- { key = "j", mods = "CMD", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
+
+		-- -- Split vertical: cmd+v
+		-- { key = "l", mods = "CMD", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
+
+		-- -- Move right one window (rotate right): ctrl+r
+		-- { key = "l", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
+
+		-- -- Move left one window (rotate left): ctrl+l
+		-- { key = "h", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
+
+		-- -- Move up one window (rotate up): ctrl+k
+		-- { key = "k", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
+
+		-- -- Move down one window (rotate down): ctrl+j
+		-- { key = "j", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
+
+		-- -- Resize the current pane left: ctrl+alt+h
+		-- {
+		-- 	key = "h",
+		-- 	mods = "CTRL|ALT",
+		-- 	action = wezterm.action.AdjustPaneSize({ "Left", 5 }),
+		-- },
+
+		-- -- Resize the current pane right: ctrl+alt+l
+		-- {
+		-- 	key = "l",
+		-- 	mods = "CTRL|ALT",
+		-- 	action = wezterm.action.AdjustPaneSize({ "Right", 5 }),
+		-- },
+
+		-- -- Resize the current pane up: ctrl+alt+k
+		-- {
+		-- 	key = "k",
+		-- 	mods = "CTRL|ALT",
+		-- 	action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
+		-- },
+
+		-- -- Resize the current pane down: ctrl+alt+j
+		-- {
+		-- 	key = "j",
+		-- 	mods = "CTRL|ALT",
+		-- 	action = wezterm.action.AdjustPaneSize({ "Down", 5 }),
+		-- },
+
 		-- Rename tab: ctrl+shift+t
 		{
 			key = "t",
