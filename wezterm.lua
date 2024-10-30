@@ -232,6 +232,13 @@ return {
 			mods = "CTRL|SHIFT",
 			action = wezterm.action.MoveTabRelative(1),
 		},
+
+    -- Zoom: focus on the current pane and hide the others
+		{
+			key = "Z",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action.TogglePaneZoomState,
+		},
 	},
 
 	font_size = 11,
