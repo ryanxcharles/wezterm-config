@@ -36,7 +36,7 @@ local config_colors_active = {
 	background = "#1E1E2E",
 	cursor_bg = "#FA8603",
 	cursor_border = "#FA8603",
-	cursor_fg = "#1E1E2E",
+	cursor_fg = "#FFFFFF",
 	selection_bg = "#51576D",
 	selection_fg = "#D9E0EE",
 
