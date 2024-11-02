@@ -137,7 +137,7 @@ wezterm.on("window-focus-changed", function(window, pane)
 	else
 		-- Window is not focused, change active tab to "great" (gray-like) color
 		window:set_config_overrides({
-			window_background_opacity = 0.8, -- Set dimmed opacity
+			window_background_opacity = 1.0, -- Set dimmed opacity
 			-- colors = config_colors_active,
 			colors = config_colors_inactive,
 		})
