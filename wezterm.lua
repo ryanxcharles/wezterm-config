@@ -168,17 +168,17 @@ return {
     -- -- Split horizontal left: cmd+h
     -- { key = "h", mods = "CMD", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
 
-    -- Move right one window (rotate right): ctrl+r
-    { key = "l", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
+    -- -- Move right one window (rotate right): ctrl+r
+    -- { key = "l", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
 
-    -- Move left one window (rotate left): ctrl+l
-    { key = "h", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
+    -- -- Move left one window (rotate left): ctrl+l
+    -- { key = "h", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
 
-    -- Move up one window (rotate up): ctrl+k
-    { key = "k", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
+    -- -- Move up one window (rotate up): ctrl+k
+    -- { key = "k", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
 
-    -- Move down one window (rotate down): ctrl+j
-    { key = "j", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
+    -- -- Move down one window (rotate down): ctrl+j
+    -- { key = "j", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
 
     -- Resize the current pane left: ctrl+alt+h
     {
@@ -263,5 +263,10 @@ return {
 
   window_frame = config_window_frame_active,
 
-  default_prog = { "/opt/homebrew/bin/nu", "--login" },
+  default_prog = {
+    "env",
+    "XDG_CONFIG_HOME=/Users/ryan/.config",
+    "/opt/homebrew/bin/nu",
+    "--login",
+  },
 }
