@@ -262,4 +262,6 @@ return {
   },
 
   window_frame = config_window_frame_active,
+
+  default_prog = { "/opt/homebrew/bin/nu", "--login" },
 }
