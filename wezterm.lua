@@ -34,6 +34,7 @@ local config_window_frame_active = {
 local config_colors_active = {
   foreground = "#D9E0EE",
   background = "#1E1E2E",
+  -- background = "#0E0E1E",
   cursor_bg = "#FA8603",
   cursor_border = "#FA8603",
   cursor_fg = "#FFFFFF",
