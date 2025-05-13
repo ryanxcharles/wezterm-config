@@ -264,10 +264,11 @@ return {
 
   window_frame = config_window_frame_active,
 
-  default_prog = {
-    "env",
-    "XDG_CONFIG_HOME=/Users/ryan/.config",
-    "/opt/homebrew/bin/nu",
-    "--login",
-  },
+  -- disable nushell for now
+  -- default_prog = {
+  --   "env",
+  --   "XDG_CONFIG_HOME=/Users/ryan/.config",
+  --   "/opt/homebrew/bin/nu",
+  --   "--login",
+  -- },
 }
