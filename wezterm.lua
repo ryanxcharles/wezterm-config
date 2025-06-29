@@ -168,16 +168,16 @@ return {
     },
 
     -- Split vertical down: cmd+j
-    { key = "j", mods = "CMD", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
+    { key = "j", mods = "CMD", action = wezterm.action.SplitPane({ direction = "Down" }) },
 
     -- Split vertical up: cmd+k
-    { key = "k", mods = "CMD", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
+    { key = "k", mods = "CMD", action = wezterm.action.SplitPane({ direction = "Up" }) },
 
     -- Split horizontal right: cmd+l
-    { key = "l", mods = "CMD", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
+    { key = "l", mods = "CMD", action = wezterm.action.SplitPane({ direction = "Right" }) },
 
     -- Split horizontal left: cmd+h
-    { key = "h", mods = "CMD", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
+    { key = "h", mods = "CMD", action = wezterm.action.SplitPane({ direction = "Left" }) },
 
     -- Move right one window (rotate right): ctrl+r
     { key = "l", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
@@ -275,10 +275,10 @@ return {
   window_frame = config_window_frame_active,
 
   -- disable nushell for now
-  -- default_prog = {
-  --   "env",
-  --   "XDG_CONFIG_HOME=/Users/ryan/.config",
-  --   "/opt/homebrew/bin/nu",
-  --   "--login",
-  -- },
+  default_prog = {
+    "env",
+    "XDG_CONFIG_HOME=/Users/ryan/.config",
+    "/opt/homebrew/bin/nu",
+    "--login",
+  },
 }
