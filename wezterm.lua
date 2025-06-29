@@ -160,26 +160,26 @@ return {
     -- Split vertical down: cmd+j
     { key = "j", mods = "CMD", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
 
-    -- -- Split vertical up: cmd+k
-    -- { key = "k", mods = "CMD", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
+    -- Split vertical up: cmd+k
+    { key = "k", mods = "CMD", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
 
     -- Split horizontal right: cmd+l
     { key = "l", mods = "CMD", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
 
-    -- -- Split horizontal left: cmd+h
-    -- { key = "h", mods = "CMD", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
+    -- Split horizontal left: cmd+h
+    { key = "h", mods = "CMD", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
 
-    -- -- Move right one window (rotate right): ctrl+r
-    -- { key = "l", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
+    -- Move right one window (rotate right): ctrl+r
+    { key = "l", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
 
-    -- -- Move left one window (rotate left): ctrl+l
-    -- { key = "h", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
+    -- Move left one window (rotate left): ctrl+l
+    { key = "h", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
 
-    -- -- Move up one window (rotate up): ctrl+k
-    -- { key = "k", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
+    -- Move up one window (rotate up): ctrl+k
+    { key = "k", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
 
-    -- -- Move down one window (rotate down): ctrl+j
-    -- { key = "j", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
+    -- Move down one window (rotate down): ctrl+j
+    { key = "j", mods = "CTRL", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
 
     -- Resize the current pane left: ctrl+alt+h
     {
