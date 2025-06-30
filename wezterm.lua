@@ -157,13 +157,13 @@ return {
     -- Move left one tab: ctrl+shift+l
     { key = "h", mods = "CTRL|SHIFT", action = wezterm.action({ ActivateTabRelative = -1 }) },
 
-    -- Split right 25%
+    -- Split right 20%
     {
       key = ";",
       mods = "CMD",
       action = wezterm.action.SplitPane({
         direction = "Right",
-        size = { Percent = 25 },
+        size = { Percent = 20 },
       }),
     },
 
