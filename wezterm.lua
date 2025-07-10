@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 
--- Reload config: cmd+shift+r
+-- Reload config: cmd+r
 
 -- local window_is_active = true -- Track window active status
 
@@ -148,6 +148,19 @@ end)
 return {
   -- Set up custom keybindings
   keys = {
+    -- Close the current pane (with confirmation prompt to avoid accidents)
+    {
+      key = "q", -- Change this to any key you prefer (e.g., 'k' for "kill")
+      mods = "CTRL|SHIFT", -- Ctrl+Shift+Q
+      action = wezterm.action.CloseCurrentPane({ confirm = true }),
+    },
+    -- Alternative: No confirmation (riskier, but faster)
+    {
+      key = "q",
+      mods = "CTRL|ALT",
+      action = wezterm.action.CloseCurrentPane({ confirm = false }),
+    },
+
     -- New tab: cmd+t
     { key = "t", mods = "CMD", action = wezterm.action({ SpawnTab = "DefaultDomain" }) },
 
@@ -163,7 +176,7 @@ return {
       mods = "CMD",
       action = wezterm.action.SplitPane({
         direction = "Right",
-        size = { Percent = 25 },
+        size = { Percent = 20 },
       }),
     },
 
