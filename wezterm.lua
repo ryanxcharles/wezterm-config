@@ -154,12 +154,6 @@ return {
       mods = "CTRL|SHIFT", -- Ctrl+Shift+Q
       action = wezterm.action.CloseCurrentPane({ confirm = true }),
     },
-    -- Alternative: No confirmation (riskier, but faster)
-    {
-      key = "q",
-      mods = "CTRL|ALT",
-      action = wezterm.action.CloseCurrentPane({ confirm = false }),
-    },
 
     -- New tab: cmd+t
     { key = "t", mods = "CMD", action = wezterm.action({ SpawnTab = "DefaultDomain" }) },
