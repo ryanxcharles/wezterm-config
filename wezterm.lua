@@ -125,7 +125,7 @@ local config = {
 	font_size = 11,
 
 	-- colors = config_colors_active,
-	color_scheme = "Tokyo Night",
+	color_scheme = "Tokyo Night Storm",
 	colors = {
 		background = "#222435",
 		tab_bar = {
