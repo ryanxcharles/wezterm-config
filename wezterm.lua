@@ -26,7 +26,7 @@ local config = {
       key = ";",
       mods = "CMD",
       action = wezterm.action.SplitPane({
-        direction = "Right",
+        direction = "Left",
         size = { Percent = 20 },
       }),
     },
