@@ -125,7 +125,8 @@ local config = {
   font_size = 11,
 
   -- colors = config_colors_active,
-  color_scheme = "Tokyo Night Storm",
+  -- color_scheme = "Tokyo Night Storm",
+  color_scheme = "Catppuccin Mocha",
   colors = {
     cursor_bg = "#FA8603",
     cursor_fg = "#FFFFFF",
